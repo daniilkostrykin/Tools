@@ -10,11 +10,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #444;
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -23,35 +25,70 @@ h1 {
     max-width: 1200px;
     padding: 20px;
 }
+
 .card {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
 }
+
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 .card h2 {
     margin: 0;
     padding: 15px;
-    font-size: 1.5rem;
-    background-color: #007bff;
+    font-size: 1.6rem;
+    background-color: #a016f0;
     color: #fff;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card h2:hover {
+    background-color: #8000ca;
 }
 .card a {
     display: block;
     text-decoration: none;
-    color: #007bff;
+    color: #c258ff;
     text-align: center;
     padding: 15px;
     font-weight: bold;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
 .card a:hover {
-    background-color: #0056b3;
     color: #fff;
+    transform: translateY(-2px);
 }
+
+/* Улучшенные стили для иконок */
+.card-icon {
+    font-size: 50px; /* Увеличенный размер значка */
+    color: #fff; /* Цвет значка */
+    margin-bottom: 15px; /* Отступ снизу от значка */
+    padding: 20px; /* Внутренний отступ для формирования фона */
+    background-color: #c258ff; /* Цвет фона */
+    border-radius: 10px; /* Сглаженные углы с радиусом 10px */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Плавная анимация при наведении */
+    display: flex; /* Используем flexbox для выравнивания значка */
+    justify-content: center; /* Центрируем горизонтально */
+    align-items: center; /* Центрируем вертикально */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для иконки */
+}
+
+
+/* Стили для значков при наведении */
+.card:hover .card-icon {
+    color: #fff; /* Меняем цвет значка при наведении */
+    transform: scale(1.2); /* Немного увеличиваем размер значка при наведении */
+}
+
