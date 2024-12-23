@@ -1,9 +1,6 @@
-document.querySelectorAll(".card-icon").forEach(function (icon) {
-    icon.addEventListener("click", function () {
-      const link = icon.closest(".card").querySelector("a");
-      if (link) {
-        window.open(link.href, "_blank");
-      }
-    });
+document.querySelectorAll('.card a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Предотвращаем дефолтное поведение ссылки
+    window.open(this.href, '_blank');
   });
-  
+});
